@@ -201,7 +201,9 @@ app.use((err, req, res, next)=>{
 
 /*_________________________________________________________________*/
 
+const port = process.env.PORT || 3000; //port available on heroku (usually 80)
+
 // PORT connection 
-app.listen(3000, ()=>{
-    console.log('Serving on port 3000')
+app.listen(port, ()=>{
+    console.log(`Serving on port ${port}`)
 });
